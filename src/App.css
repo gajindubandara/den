@@ -1,0 +1,548 @@
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+
+.section-dark{
+    background: #1d2027;
+}
+
+.den-btn {
+    margin-top: 30px;
+    position: relative;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background: #198754;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.camera-icon {
+    transition: transform 0.3s ease;
+    animation: pulse 0.5s infinite;
+}
+
+/* Keyframe for shake animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Back to original size */
+    }
+}
+
+.btn-text {
+    transition: transform 0.3s ease;
+}
+
+/* Button hover effects */
+.den-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(21, 128, 61, 0.2);
+}
+
+.den-btn:hover .camera-icon {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.den-btn:hover .btn-text {
+    transform: scale(1.05);
+}
+
+
+/* Hero section */
+/*.hero-section {*/
+/*    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
+/*    url('https://images.unsplash.com/photo-1504173010664-32509aeebb62?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2lsZGxpZmV8ZW58MHx8MHx8fDA%3D') center/cover;*/
+/*    height: 80vh;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    color: white;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mute-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Maintain video aspect ratio on mobile */
+@media (max-width: 768px) {
+    .hero-video {
+        height: auto;
+        object-fit: contain;
+        margin-top: 70px;
+    }
+}
+
+.hero-content {
+    margin-top: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.book-btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #198754;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    /*font-size: 12px;*/
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    /*text-transform: uppercase;*/
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    opacity: .95;
+}
+
+.book-btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    /*background: rgba(255, 255, 255, 0.5) !important;*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #28a745;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Feature cards */
+.feature-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section {
+    background: url('https://media.istockphoto.com/id/1489566726/photo/leopard-in-sri-lanka.jpg?s=612x612&w=0&k=20&c=kIHqKhwO_JCq94l7yg8zkZuY-v-BbiaaRxr-giy97w4=') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+}
+
+/* Stats section */
+.stats {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/stats-bg.jpg') center/cover fixed;
+    color: white;
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+    }
+
+    .hero-content {
+        text-align: center;
+        /*padding: 2rem;*/
+    }
+
+    .stats {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+/*Explore*/
+.photo-preview-section img {
+    object-fit: cover;
+}
+
+.photo-preview-section .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-start;
+}
+
+.photo-preview-section .responsive-container-block.bigContainer {
+    padding: 10px 30px;
+}
+
+.photo-preview-section .responsive-container-block.Container {
+    max-width: 1320px;
+    padding: 0;
+    margin: 50px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.photo-preview-section .responsive-container-block.imgContainer {
+    padding: 0;
+    min-height: auto;
+    height: 720px;
+    position: relative;
+}
+
+.photo-preview-section .project {
+    position: absolute;
+    width: 39.8%;
+    padding: 10px;
+}
+
+.photo-preview-section .btn-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.photo-preview-section .project:hover .btn-box {
+    display: block;
+}
+
+.photo-preview-section .btn {
+    cursor: pointer;
+}
+
+.photo-preview-section .smallImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-preview-section .project.project1 {
+    width: 39.8%;
+    height: 66.67%;
+    padding: 0;
+}
+
+.photo-preview-section .project.project2 {
+    bottom: 0;
+    top: auto;
+    right: auto;
+    width: 59.75%;
+    height: 32.6%;
+    padding: 0;
+}
+
+.photo-preview-section .project.project3 {
+    left: 40.2%;
+    right: auto;
+    bottom: auto;
+    width: 19.4%;
+    height: 32.98%;
+    padding: 0;
+}
+
+.photo-preview-section .project.project4 {
+    left: 40.2%;
+    top: 33.7%;
+    width: 19.5%;
+    height: 32.98%;
+    padding: 0;
+}
+
+.photo-preview-section .project.project5 {
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: 39.8%;
+    height: 32.6%;
+    padding: 0;
+}
+
+.photo-preview-section .project.project6 {
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+    width: 39.8%;
+    height: 66.67%;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .photo-preview-section .responsive-container-block.imgContainer {
+        height: 600px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .photo-preview-section .project.project5 {
+        top: 520px;
+        width: 100%;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        height: 200px;
+    }
+
+    .photo-preview-section .responsive-container-block.imgContainer {
+        height: 930px;
+    }
+
+    .photo-preview-section .project.project1 {
+        width: 64%;
+        height: 300px;
+    }
+
+    .photo-preview-section .project.project3 {
+        left: auto;
+        width: 35%;
+        height: 145px;
+        right: 0;
+    }
+
+    .photo-preview-section .project.project4 {
+        left: auto;
+        width: 35%;
+        height: 145px;
+        top: 155px;
+        right: 0;
+    }
+
+    .photo-preview-section .project.project6 {
+        height: 200px;
+        width: 100%;
+    }
+
+    .photo-preview-section .project.project2 {
+        width: 100%;
+        top: 310px;
+        height: 200px;
+    }
+
+    .photo-preview-section .project {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .photo-preview-section .overlay-inner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .photo-preview-section .responsive-container-block.imgContainer {
+        height: 890px;
+    }
+
+    .photo-preview-section .responsive-container-block.bigContainer {
+        padding: 10px 20px;
+    }
+
+
+    .photo-preview-section .project.project1 {
+        height: 250px;
+    }
+
+    .photo-preview-section .project.project3 {
+        height: 123px;
+    }
+
+    .photo-preview-section .project.project4 {
+        height: 123px;
+        top: 127px;
+    }
+
+    .photo-preview-section .project.project2 {
+        top: 260px;
+    }
+
+    .photo-preview-section .project.project5 {
+        top: 470px;
+    }
+
+    .photo-preview-section .project.project6 {
+        top: 680px;
+    }
+}
+
+/*testimonial section*/
+.testimonial-section {
+    background: url('https://getwallpapers.com/wallpaper/full/1/1/6/942457-wildlife-backgrounds-for-desktop-1920x1200-720p.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+}
+
+.testimonial-card{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/*contact section*/
+.contact-info {
+
+    transition: all 0.3s ease;
+}
+
+.info-icon {
+    transition: transform 0.3s ease;
+}
+
+
+/* Button hover effects */
+.contact-info:hover {
+    transform: translateY(-2px);
+}
+
+.contact-info:hover .info-icon {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+.text-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form {
+    border-radius: 10px;
+}
+
+.preloader-logo {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.contact-input{
+    background: #3e3e3e;
+    border: none;
+}
+
+/*Footer*/
+/* Hover effect for social media icons */
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    color: #00ff00;  /* Replace with your preferred hover color */
+    transform: scale(1.2);  /* Slightly enlarge the icon */
+}
+
+/* Optional: Change color of text links for the hover effect */
+.social-icon:hover i {
+    color: #00ff00;  /* Replace with your preferred hover color */
+}
