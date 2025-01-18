@@ -3,7 +3,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.section-dark{
+.section-dark {
     background: #1d2027;
 }
 
@@ -179,6 +179,10 @@ html {
     padding: 0.5rem 0;
 }
 
+.navbar-collapse {
+    margin-top: 10px;
+}
+
 .navbar-toggler {
     border: none;
 }
@@ -219,7 +223,7 @@ html {
 }
 
 .feature-section {
-    background: url('https://media.istockphoto.com/id/1489566726/photo/leopard-in-sri-lanka.jpg?s=612x612&w=0&k=20&c=kIHqKhwO_JCq94l7yg8zkZuY-v-BbiaaRxr-giy97w4=') no-repeat center center;
+    background: url('https://media2.thrillophilia.com/images/photos/000/176/707/original/1597134734_shutterstock_611412188.jpg?') no-repeat center center;
     background-size: cover; /* Ensures the image covers the entire section */
 }
 
@@ -234,9 +238,6 @@ html {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .hero-section {
-        height: 100vh;
-    }
 
     .hero-content {
         text-align: center;
@@ -257,6 +258,7 @@ html {
         transform: translateY(-10px) scale(1.02);
     }
 }
+
 /*Explore*/
 .photo-preview-section img {
     object-fit: cover;
@@ -285,7 +287,6 @@ html {
     align-items: center;
     justify-content: center;
 }
-
 
 
 .photo-preview-section .responsive-container-block.imgContainer {
@@ -478,7 +479,7 @@ html {
     background-size: cover; /* Ensures the image covers the entire section */
 }
 
-.testimonial-card{
+.testimonial-card {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -525,7 +526,7 @@ html {
     }
 }
 
-.contact-input{
+.contact-input {
     background: #3e3e3e;
     border: none;
 }
@@ -538,11 +539,11 @@ html {
 }
 
 .social-icon:hover {
-    color: #00ff00;  /* Replace with your preferred hover color */
-    transform: scale(1.2);  /* Slightly enlarge the icon */
+    color: #00ff00; /* Replace with your preferred hover color */
+    transform: scale(1.2); /* Slightly enlarge the icon */
 }
 
 /* Optional: Change color of text links for the hover effect */
 .social-icon:hover i {
-    color: #00ff00;  /* Replace with your preferred hover color */
+    color: #00ff00; /* Replace with your preferred hover color */
 }

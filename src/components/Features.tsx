@@ -5,7 +5,7 @@ const AboutSection: React.FC = () => {
     return (
         <section className="py-5 feature-section" id="about">
             <div className="container text-center">
-                <h1 className="display-4 fw-bold mb-4" data-aos="fade-right" data-aos-delay="400" style={{color:"white"}}>Why Choose The Den at Yala?</h1>
+                <h1 className="display-4 fw-bold mb-4" data-aos="fade-right" style={{color:"white"}}>Why Choose The Den at Yala?</h1>
                 <div className="row">
                     <div className="col-md-4 mb-4" data-aos="fade-up">
                         <div className="card feature-card">
@@ -18,7 +18,7 @@ const AboutSection: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div className="col-md-4 mb-4" data-aos="fade-up">
                         <div className="card feature-card">
                             <div className="card-body text-center">
                                 <ShieldCheck style={{width: 48, height: 48, fill: "#198754"}} className="mb-3"/>
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div className="col-md-4 mb-4" data-aos="fade-up">
                         <div className="card feature-card">
                             <div className="card-body text-center">
                                 <BedDouble style={{width: 48, height: 48, fill: "#198754"}} className="mb-3"/>
@@ -42,7 +42,7 @@ const AboutSection: React.FC = () => {
                     </div>
 
                     {/* New Feature: Excellent Cuisine */}
-                    <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div className="col-md-4 mb-4" data-aos="fade-up" >
                         <div className="card feature-card">
                             <div className="card-body text-center">
                                 <Utensils style={{width: 48, height: 48, fill: "#198754"}} className="mb-3"/>
@@ -55,7 +55,7 @@ const AboutSection: React.FC = () => {
                     </div>
 
                     {/* New Feature: Adventure Activities */}
-                    <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="800">
+                    <div className="col-md-4 mb-4" data-aos="fade-up" >
                         <div className="card feature-card">
                             <div className="card-body text-center">
                                 <Mountain style={{width: 48, height: 48, fill: "#198754"}} className="mb-3"/>
@@ -68,7 +68,7 @@ const AboutSection: React.FC = () => {
                     </div>
 
                     {/* New Feature: Eco-Friendly Practices */}
-                    <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="1000">
+                    <div className="col-md-4 mb-4" data-aos="fade-up" >
                         <div className="card feature-card">
                             <div className="card-body text-center">
                                 <Leaf style={{width: 48, height: 48, fill: "#198754"}} className="mb-3"/>

@@ -197,7 +197,7 @@ const ContactSection: React.FC = () => {
                     </div>
 
                     {/* Google Map */}
-                    <div className="col-lg-6" data-aos="fade-right">
+                    <div className="col-lg-6" data-aos="fade-up">
                         <div className="map-container rounded shadow-lg">
                             <iframe
                                 title="Google Map"

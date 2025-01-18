@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Container } from 'react-bootstrap';
 import { Volume2, VolumeX } from 'lucide-react';
 import { HeroContent } from './HeroContent';
 

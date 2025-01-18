@@ -3,10 +3,8 @@ import './App.css';
 import {Navbar} from "./components/Navbar.tsx";
 import {Hero} from "./components/Hero.tsx";
 import Features from "./components/Features.tsx";
-import Stats from "./components/Stats.tsx";
 import Testimonials from "./components/Testimonials.tsx";
 import Footer from "./components/Footer.tsx";
-import BackToTop from "./components/BackToTop.tsx";
 import Contact from "./components/Contact.tsx";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,6 +23,7 @@ const App: React.FC = () => {
         <div className="app">
             <Navbar/>
             <Hero/>
+
             <Features/>
             <PhotoPreviewSection/>
             {/*<Stats />*/}

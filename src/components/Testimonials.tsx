@@ -6,7 +6,7 @@ const TestimonialCard: React.FC<{ text: string; author: string }> = ({
                                                                          author,
                                                                      }) => {
     return (
-        <div className="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch " data-aos="fade-up" data-aos-delay="800">
+        <div className="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch " data-aos="fade-up" >
             <div className="card shadow-lg p-4 w-100 testimonial-card">
                 {/* Quote Icon */}
                 <div className="mb-4 text-center">
@@ -58,7 +58,7 @@ const Testimonials: React.FC = () => {
             <div className="container text-center">
                 {/* Section Header */}
                 <div className="text-center mb-5">
-                    <h1 className="display-4 fw-bold mb-4" data-aos="fade-right" data-aos-delay="400">
+                    <h1 className="display-4 fw-bold mb-4" data-aos="fade-right" >
                         What Our Guests Say
                     </h1>
                     {/*<Star*/}

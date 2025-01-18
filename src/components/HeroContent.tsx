@@ -1,6 +1,5 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import {Container} from 'react-bootstrap';
 import Logo from '../assets/logo.png'
 
 export const HeroContent: React.FC = () => {

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Users, Hotel, Camera, Award } from 'lucide-react';
 import { Carousel, Image } from 'antd';
 
@@ -32,7 +32,8 @@ const StatItem: React.FC<StatItemProps> = ({ Icon, value, label }) => {
     return (
         <div className=" col-12 d-flex justify-content-center mb-4">
             <div className="text-center">
-                <Icon className="mb-3" size={48} />
+                {/*<Icon className="mb-3" size={48} />*/}
+                <Icon className="mb-3" />
                 <h3>{count}</h3>
                 <p>{label}</p>
             </div>
